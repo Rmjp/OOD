@@ -1,4 +1,4 @@
-package ex1;
+import week1.ex2.Circle;
 
 public class Test {
     public static void main(String[] args) {

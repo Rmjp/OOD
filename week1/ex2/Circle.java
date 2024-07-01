@@ -1,8 +1,8 @@
-package ex1;
+package week1.ex2;
 
 public class Circle {
     private double radius;
-
+    
     public Circle(double radius) {
         this.radius = radius;
     }
