@@ -28,7 +28,7 @@ public class Account {
     /** set account balance */
     @Override
     public String toString() {
-        return "Account[number=" + number + ",balance=" + balance + "]";
+        return "Account[number=" + number + ",balance=" + String.format("%.2f", balance) + "]";
     }
 
     /** credit amount to account */

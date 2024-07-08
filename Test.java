@@ -9,5 +9,12 @@ public class Test {
         System.out.println(b);
         a.transferTo(30, b);
         System.out.println(a);
+
+        Bank bank = new Bank("Bank of America");
+        bank.addAccount(a);
+        bank.addAccount(b);
+        bank.printAccounts();
+        a.transferTo(70, b);
+        bank.printAccounts();
     }
 }
