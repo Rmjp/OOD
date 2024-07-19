@@ -1,22 +1,23 @@
-import week3.eg3.*;
+import week3.sp1.*;
 
 public class Test {
     public static void main(String[] args) {
-        // Test Student class
-        Student s1 = new Student("John", "1 Happy Ave");
-        s1.addCourseGrade("Math", 90);
-        s1.addCourseGrade("English", 85);
-        s1.printGrades();
-        System.out.println("Average is " + s1.getAverageGrade());
-        
-        // Test Teacher class
-        Teacher t1 = new Teacher("Paul", "8 Sunset Blvd");
-        System.out.println(t1);
-        System.out.println(t1.addCourse("Math"));
-        System.out.println(t1.addCourse("English"));
-        System.out.println(t1.addCourse("Math"));
-        System.out.println(t1.removeCourse("Math"));
-        System.out.println(t1.removeCourse("Math"));
+        Dog dog = new Dog("Rex");
+        dog.makeSound();
+        Rabbit rabbit = new Rabbit("Bunny");
+        rabbit.makeSound();
+        AnimalHome home = new AnimalHome();
+        home.addAnimal(dog);
+        home.addAnimal(rabbit);
+
+        for (Animal animal : home.getAll()) {
+            if(animal instanceof Dog) {
+                System.out.println("Dog has " + ((Dog) animal).getNumberOfLegs() + " legs");
+            }
+            if(animal.getClass() == Rabbit.class) {
+                System.out.println("Rabbit is a rabbit");
+            }
+        }
     }
 
 }
